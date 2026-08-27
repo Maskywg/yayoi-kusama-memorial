@@ -6,6 +6,9 @@
 <title>草間彌生｜無限之後仍是無限</title>
 <meta name="description" content="草間彌生（1929–2026）紀念頁：生涯年譜、代表作品與藝術精神。" />
 <meta name="theme-color" content="#f6d500" />
+<link rel="preconnect" href="https://tile.openstreetmap.org" crossorigin>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous" defer></script>
 <style>
 :root{
   --yellow:#f6d500;
@@ -151,10 +154,14 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
 .timeline{max-width:1000px}.event{transition:.18s transform,.18s box-shadow}.event:hover{transform:translateY(-2px);box-shadow:9px 9px 0 var(--yellow)}.event strong{display:block;margin-bottom:3px}
 .works-inner>p{max-width:650px;color:#c5c0b8}.cards{grid-template-columns:repeat(12,1fr);gap:24px}.card{grid-column:span 4;min-height:430px}.card:first-child,.card:last-child{grid-column:span 8}.card:hover{box-shadow:0 14px 0 var(--red)}.card:first-child .art,.card:last-child .art{height:220px}.art:after{content:attr(data-index);position:absolute;right:14px;bottom:2px;font-size:3rem;line-height:1;font-weight:950;letter-spacing:-.08em;color:rgba(17,17,17,.8)}
 .legacy-grid{counter-reset:legacy}.legacy-box{position:relative;counter-increment:legacy}.legacy-box:after{content:"0" counter(legacy);position:absolute;right:18px;top:8px;font-size:3rem;font-weight:950;color:rgba(17,17,17,.11)}.legacy-box b{display:block;max-width:78%}
+.locations{max-width:none;background:#ebe6dc}.locations-inner{max-width:1120px;margin:auto;padding:clamp(76px,10vw,126px) 24px}.map-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,390px);gap:40px;align-items:end}.map-intro h2{font-size:clamp(2.4rem,5vw,4.35rem);text-wrap:balance}.map-intro p{margin:0 0 26px;color:var(--muted)}
+#kusama-map{height:min(68vh,680px);min-height:480px;margin-top:34px;border:4px solid var(--ink);background:#d8d5cb;box-shadow:12px 12px 0 var(--yellow);z-index:1}.map-marker{display:grid;place-items:center;width:34px!important;height:34px!important;margin:-17px 0 0 -17px!important;border:4px solid var(--ink);border-radius:50%;background:var(--yellow);color:var(--ink);font-weight:950;box-shadow:3px 3px 0 var(--red)}.map-marker.active{background:var(--red);color:#fff;box-shadow:3px 3px 0 var(--yellow)}.leaflet-popup-content-wrapper{border:3px solid var(--ink);border-radius:0;background:var(--paper);box-shadow:7px 7px 0 var(--red)}.leaflet-popup-tip{background:var(--ink)}.leaflet-popup-content{margin:18px;line-height:1.55}.leaflet-popup-content b{display:block;margin-bottom:5px;font-size:1.05rem}.leaflet-popup-content a{font-weight:900}.leaflet-control-zoom a{color:var(--ink)}
+.japan-place-list{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:34px}.place-card{display:grid;grid-template-columns:52px 1fr;gap:16px;width:100%;padding:20px;border:2px solid var(--ink);background:var(--white);color:var(--ink);text-align:left;font:inherit;cursor:pointer;transition:.18s transform,.18s box-shadow}.place-card:hover,.place-card[aria-pressed="true"]{transform:translateY(-3px);box-shadow:6px 6px 0 var(--yellow)}.place-num{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--yellow);border:3px solid var(--ink);font-weight:950}.place-card strong{display:block;line-height:1.35}.place-card small{display:block;margin-top:4px;color:var(--muted)}.place-url{display:block;margin-top:9px;color:#8b1814;font-size:.76rem;font-weight:800;overflow-wrap:anywhere}
+.world-list{margin-top:clamp(72px,9vw,110px)}.world-head{display:grid;grid-template-columns:1fr minmax(260px,420px);gap:40px;align-items:end}.world-head p{margin:0 0 24px;color:var(--muted)}.world-items{margin-top:28px;border-top:3px solid var(--ink)}.world-item{display:grid;grid-template-columns:80px minmax(0,1fr) minmax(260px,.75fr);gap:22px;padding:24px 4px;border-bottom:1px solid rgba(17,17,17,.28);align-items:start}.world-country{font-size:.78rem;letter-spacing:.08em;font-weight:950;color:var(--red)}.world-item h3{margin:0;font-size:1.12rem;line-height:1.4}.world-item p{margin:5px 0 0;color:var(--muted);font-size:.9rem}.world-item a{font-size:.82rem;font-weight:850;overflow-wrap:anywhere}
 .end:before{content:"";position:absolute;inset:-30%;opacity:.12;background:radial-gradient(circle,#fff 0 8px,transparent 9px) 0 0/54px 54px;transform:rotate(8deg)}.end h2,.end p{position:relative}.sources a{font-weight:750}.source-note{padding:18px 20px;background:rgba(246,213,0,.22);border-left:5px solid var(--yellow)}
 .to-top{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:40;width:48px;height:48px;display:grid;place-items:center;border:3px solid var(--ink);border-radius:50%;background:var(--yellow);text-decoration:none;font-weight:950;box-shadow:4px 4px 0 var(--ink);opacity:0;visibility:hidden;transform:translateY(10px);transition:.2s ease}.to-top.visible{opacity:1;visibility:visible;transform:none}
-@media(max-width:900px){.card,.card:first-child,.card:last-child{grid-column:span 6}.quote{position:static}.impact-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:620px){body{font-size:16px}.hero{padding-inline:16px;place-items:end center}.hero-card{padding:28px 22px;box-shadow:9px 9px 0 var(--red)}h1{font-size:clamp(3rem,16vw,4.5rem)}.hero-actions{display:grid}.hero-actions .button{width:100%}nav{justify-content:flex-start}.impact-grid{grid-template-columns:1fr}.timeline:before{left:19px}.titem{display:block;padding:0 0 30px 48px}.year{text-align:left;padding-bottom:8px;color:var(--red);font-size:1rem}.event{padding:18px;box-shadow:5px 5px 0 var(--yellow)}.event:before{left:-39px;top:-28px;width:16px;height:16px}.cards{display:block}.card,.card:first-child,.card:last-child{min-height:0;margin-bottom:22px}.art,.card:first-child .art,.card:last-child .art{height:180px}.quote{padding:30px 25px;border-radius:0 56px 0 56px}.to-top{width:44px;height:44px}}
+@media(max-width:900px){.card,.card:first-child,.card:last-child{grid-column:span 6}.quote{position:static}.impact-grid{grid-template-columns:repeat(2,1fr)}.map-intro,.world-head{grid-template-columns:1fr}.world-item{grid-template-columns:70px 1fr}.world-item>a{grid-column:2}}
+@media(max-width:620px){body{font-size:16px}.hero{padding-inline:16px;place-items:end center}.hero-card{padding:28px 22px;box-shadow:9px 9px 0 var(--red)}h1{font-size:clamp(3rem,16vw,4.5rem)}.hero-actions{display:grid}.hero-actions .button{width:100%}nav{justify-content:flex-start}.impact-grid{grid-template-columns:1fr}.timeline:before{left:19px}.titem{display:block;padding:0 0 30px 48px}.year{text-align:left;padding-bottom:8px;color:var(--red);font-size:1rem}.event{padding:18px;box-shadow:5px 5px 0 var(--yellow)}.event:before{left:-39px;top:-28px;width:16px;height:16px}.cards{display:block}.card,.card:first-child,.card:last-child{min-height:0;margin-bottom:22px}.art,.card:first-child .art,.card:last-child .art{height:180px}.quote{padding:30px 25px;border-radius:0 56px 0 56px}.japan-place-list{grid-template-columns:1fr}#kusama-map{height:62vh;min-height:430px;margin-inline:-6px}.world-item{grid-template-columns:1fr;gap:8px}.world-item>a{grid-column:1}.to-top{width:44px;height:44px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 @media print{nav,.progress,.to-top,.hero-actions{display:none}.hero{min-height:auto}.card{break-inside:avoid}}
 </style>
@@ -181,6 +188,7 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
   <a href="#impact">影響與意義</a>
   <a href="#timeline">年譜</a>
   <a href="#works">代表作品</a>
+  <a href="#locations">作品地圖</a>
   <a href="#legacy">留下什麼</a>
   <a href="#sources">資料來源</a>
 </nav>
@@ -252,8 +260,44 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
   </div>
 </div>
 
+<section class="locations" id="locations" aria-labelledby="locations-title">
+  <div class="locations-inner">
+    <div class="map-intro">
+      <div>
+        <div class="section-kicker">05 · ART MAP</div>
+        <h2 id="locations-title">在日本，遇見她的作品</h2>
+      </div>
+      <p>地圖標示具代表性的常設或長期展示地點。點選圓點或下方項目，可查看作品、所在地與官方資料；實際開放狀態仍請在出發前確認。</p>
+    </div>
+    <div id="kusama-map" role="region" aria-label="草間彌生日本重要裝置藝術位置互動地圖"></div>
+    <div class="japan-place-list" aria-label="日本作品位置列表">
+      <button class="place-card" type="button" data-place="0" aria-pressed="false"><span class="place-num">1</span><span><strong>《幻之華》</strong><small>長野縣松本市美術館 · 2002</small><span class="place-url">https://matsumoto-artmuse.jp/en/visit/facility/floormap/</span></span></button>
+      <button class="place-card" type="button" data-place="1" aria-pressed="false"><span class="place-num">2</span><span><strong>《花咲ける妻有》</strong><small>新潟縣越後妻有・農舞台 · 2003</small><span class="place-url">https://www.echigo-tsumari.jp/en/art/artwork/tsumari_in_bloom/</span></span></button>
+      <button class="place-card" type="button" data-place="2" aria-pressed="false"><span class="place-num">3</span><span><strong>《愛はとこしえ十和田でうたう》</strong><small>青森縣十和田市現代美術館藝術廣場 · 2010</small><span class="place-url">https://towadaartcenter.com/zh-hant/collection/love-forever-singing-in-towada/</span></span></button>
+      <button class="place-card" type="button" data-place="3" aria-pressed="false"><span class="place-num">4</span><span><strong>《南瓜》</strong><small>香川縣直島・Benesse House Museum · 2022 再製作</small><span class="place-url">https://benesse-artsite.jp/en/special2022/pumpkin.html</span></span></button>
+      <button class="place-card" type="button" data-place="4" aria-pressed="false"><span class="place-num">5</span><span><strong>《赤南瓜》</strong><small>香川縣直島・宮浦港 · 2006</small><span class="place-url">https://benesse-artsite.jp/en/stay/benessehouse/program/03.html</span></span></button>
+      <button class="place-card" type="button" data-place="5" aria-pressed="false"><span class="place-num">6</span><span><strong>《南瓜》</strong><small>福岡市美術館戶外廣場 · 1994</small><span class="place-url">https://www.fukuoka-art-museum.jp/collection_highlight/2656/</span></span></button>
+      <button class="place-card" type="button" data-place="6" aria-pressed="false"><span class="place-num">7</span><span><strong>《High Heel》</strong><small>鹿兒島縣霧島藝術之森 · 2002</small><span class="place-url">https://open-air-museum.org/en/inside_art_works/inside_art_works-690</span></span></button>
+    </div>
+
+    <div class="world-list">
+      <div class="world-head">
+        <div><div class="section-kicker">WORLDWIDE</div><h2>海外重要裝置</h2></div>
+        <p>海外作品不放入日本地圖，改以文字列出館藏與展示資訊；標示「館藏」不等於每天展出，請以館方最新頁面為準。</p>
+      </div>
+      <div class="world-items">
+        <article class="world-item"><div class="world-country">美國 · 洛杉磯</div><div><h3>Infinity Mirrored Room—The Souls of Millions of Light Years Away</h3><p>The Broad 館藏；館方目前列為開放，須另行預約時段。</p></div><a href="https://www.thebroad.org/visit/mirror-rooms" target="_blank" rel="noopener noreferrer">https://www.thebroad.org/visit/mirror-rooms ↗</a></article>
+        <article class="world-item"><div class="world-country">美國 · 阿肯色</div><div><h3>Infinity Mirrored Room—My Heart Is Dancing into the Universe</h3><p>Crystal Bridges Museum of American Art 館藏；作品頁目前標示 On View。</p></div><a href="https://crystalbridges.org/artworks/2019-2" target="_blank" rel="noopener noreferrer">https://crystalbridges.org/artworks/2019-2 ↗</a></article>
+        <article class="world-item"><div class="world-country">丹麥 · 胡姆勒拜克</div><div><h3>Gleaming Lights of the Souls</h3><p>Louisiana Museum of Modern Art 館藏；館方目前標示於 South Wing 展出。</p></div><a href="https://louisiana.dk/en/exhibition/kusama-installation/" target="_blank" rel="noopener noreferrer">https://louisiana.dk/en/exhibition/kusama-installation/ ↗</a></article>
+        <article class="world-item"><div class="world-country">澳洲 · 坎培拉</div><div><h3>The Spirits of the Pumpkins Descended into the Heavens</h3><p>National Gallery of Australia 館藏；曾巡迴展出，參觀前請確認當期展場。</p></div><a href="https://nga.gov.au/stories-ideas/yayoi-kusama-infinity-rooms/" target="_blank" rel="noopener noreferrer">https://nga.gov.au/stories-ideas/yayoi-kusama-infinity-rooms/ ↗</a></article>
+        <article class="world-item"><div class="world-country">澳洲 · 布里斯本</div><div><h3>Soul under the moon</h3><p>QAGOMA 館藏；作品頁目前明確標示未公開展出。</p></div><a href="https://collection.qagoma.qld.gov.au/objects/14351" target="_blank" rel="noopener noreferrer">https://collection.qagoma.qld.gov.au/objects/14351 ↗</a></article>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="legacy">
-  <div class="section-kicker">05 · LEGACY</div>
+  <div class="section-kicker">06 · LEGACY</div>
   <h2>她留下的不只是圓點。</h2>
   <div class="legacy-grid">
     <div class="legacy-box"><b>把心理經驗變成形式</b><p>她沒有把幻視只當成私人苦痛，而是把「重複、增殖、自我消滅」轉化成一套完整藝術語言。</p></div>
@@ -268,7 +312,7 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
 </section>
 
 <section id="sources">
-  <div class="section-kicker">06 · SOURCES</div>
+  <div class="section-kicker">07 · SOURCES</div>
   <h2>資料來源</h2>
   <ol class="sources">
     <li><a href="https://yayoi-kusama.jp/en/news4518/" target="_blank" rel="noopener">草間彌生官方網站：逝世公告</a>（2026-08-27）。</li>
@@ -304,6 +348,47 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
   addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(updateUI); ticking = true; } }, {passive:true});
   addEventListener('resize', updateUI, {passive:true});
   updateUI();
+
+  const places = [
+    {name:'幻之華', city:'長野縣松本市美術館', year:'2002', lat:36.2333, lng:137.9765, url:'https://matsumoto-artmuse.jp/en/visit/facility/floormap/'},
+    {name:'花咲ける妻有', city:'新潟縣越後妻有・農舞台', year:'2003', lat:37.1321, lng:138.6130, url:'https://www.echigo-tsumari.jp/en/art/artwork/tsumari_in_bloom/'},
+    {name:'愛はとこしえ十和田でうたう', city:'青森縣十和田市現代美術館藝術廣場', year:'2010', lat:40.6128, lng:141.2055, url:'https://towadaartcenter.com/zh-hant/collection/love-forever-singing-in-towada/'},
+    {name:'南瓜', city:'香川縣直島・Benesse House Museum', year:'2022 再製作', lat:34.4497, lng:133.9907, url:'https://benesse-artsite.jp/en/special2022/pumpkin.html'},
+    {name:'赤南瓜', city:'香川縣直島・宮浦港', year:'2006', lat:34.4597, lng:133.9726, url:'https://benesse-artsite.jp/en/stay/benessehouse/program/03.html'},
+    {name:'南瓜', city:'福岡市美術館戶外廣場', year:'1994', lat:33.5860, lng:130.3801, url:'https://www.fukuoka-art-museum.jp/collection_highlight/2656/'},
+    {name:'High Heel', city:'鹿兒島縣霧島藝術之森', year:'2002', lat:31.9522, lng:130.7530, url:'https://open-air-museum.org/en/inside_art_works/inside_art_works-690'}
+  ];
+
+  function initMap() {
+    const mapNode = document.getElementById('kusama-map');
+    if (!mapNode) return;
+    if (!window.L) {
+      mapNode.innerHTML = '<p style="padding:24px">互動地圖暫時無法載入；仍可使用下方位置與官方網址查看作品。</p>';
+      return;
+    }
+    const map = L.map(mapNode, {scrollWheelZoom:false, minZoom:4}).setView([36.4, 137.2], 5);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom:19,
+      attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+    const markers = places.map((place, index) => {
+      const icon = L.divIcon({className:'map-marker', html:String(index + 1), iconSize:[34,34]});
+      return L.marker([place.lat, place.lng], {icon, title:`${index + 1}. ${place.name}`})
+        .addTo(map)
+        .bindPopup(`<b>${index + 1}. ${place.name}</b>${place.city} · ${place.year}<br><a href="${place.url}" target="_blank" rel="noopener noreferrer">官方作品頁 ↗</a>`);
+    });
+    map.fitBounds(L.latLngBounds(places.map(place => [place.lat, place.lng])), {padding:[34,34]});
+    document.querySelectorAll('.place-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const index = Number(card.dataset.place);
+        document.querySelectorAll('.place-card').forEach(item => item.setAttribute('aria-pressed', String(item === card)));
+        map.flyTo([places[index].lat, places[index].lng], index === 3 || index === 4 ? 13 : 10, {duration:.8});
+        markers[index].openPopup();
+      });
+    });
+    setTimeout(() => map.invalidateSize(), 80);
+  }
+  addEventListener('DOMContentLoaded', initMap, {once:true});
 })();
 </script>
 </body>
