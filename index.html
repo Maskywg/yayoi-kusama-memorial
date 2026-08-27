@@ -103,6 +103,19 @@ h2{font-size:clamp(2.3rem,6vw,4.5rem);line-height:1;margin:.18em 0 .5em;letter-s
 .timeline-photo img{display:block;width:100%;height:auto;max-height:520px;object-fit:cover;background:#dedbd4}
 .timeline-photo figcaption{padding:11px 13px;border-top:2px solid var(--ink);font-size:.74rem;line-height:1.55;color:#4a4640}
 .timeline-photo figcaption a{font-weight:900}
+.pumpkin-memory{max-width:none;background:var(--yellow);border-block:4px solid var(--ink)}
+.pumpkin-inner{max-width:1120px;margin:auto;padding:clamp(76px,10vw,126px) 24px}
+.pumpkin-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.72fr);gap:clamp(34px,7vw,82px);align-items:end}
+.pumpkin-head h2{margin-bottom:0}
+.pumpkin-testimony{margin:0;padding:28px;border:3px solid var(--ink);background:var(--paper);box-shadow:9px 9px 0 var(--red);font-family:"Yu Mincho","Noto Serif TC",serif;font-size:clamp(1.15rem,2vw,1.45rem);line-height:1.7}
+.pumpkin-testimony cite{display:block;margin-top:14px;font-family:inherit;font-size:.67em;font-style:normal;color:var(--muted)}
+.pumpkin-analysis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:52px;counter-reset:pumpkin}
+.pumpkin-point{position:relative;counter-increment:pumpkin;padding:25px 22px;background:var(--paper);border:3px solid var(--ink)}
+.pumpkin-point:before{content:"0" counter(pumpkin);display:block;margin-bottom:22px;color:var(--red);font-size:1.8rem;font-weight:950;line-height:1}
+.pumpkin-point h3{margin:0;font-size:1.18rem;line-height:1.35}
+.pumpkin-point p{margin:.85em 0 0;color:#403b34;font-size:.93rem;line-height:1.75}
+.pumpkin-conclusion{display:flex;align-items:center;gap:20px;margin:32px 0 0;padding:20px 24px;background:var(--ink);color:#fff;font-size:1.08rem;font-weight:800;line-height:1.7}
+.pumpkin-conclusion:before{content:"●";color:var(--red);font-size:2.4rem}
 .works{background:#111;color:#fff;max-width:none}
 .works-inner{max-width:1120px;margin:auto;padding:92px 24px}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:42px}
@@ -185,8 +198,8 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
 .world-list{margin-top:clamp(72px,9vw,110px)}.world-head{display:grid;grid-template-columns:1fr minmax(260px,420px);gap:40px;align-items:end}.world-head p{margin:0 0 24px;color:var(--muted)}.world-items{margin-top:28px;border-top:3px solid var(--ink)}.world-item{display:grid;grid-template-columns:80px minmax(0,1fr) minmax(260px,.75fr);gap:22px;padding:24px 4px;border-bottom:1px solid rgba(17,17,17,.28);align-items:start}.world-country{font-size:.78rem;letter-spacing:.08em;font-weight:950;color:var(--red)}.world-item h3{margin:0;font-size:1.12rem;line-height:1.4}.world-item p{margin:5px 0 0;color:var(--muted);font-size:.9rem}.world-item a{font-size:.82rem;font-weight:850;overflow-wrap:anywhere}
 .end:before{content:"";position:absolute;inset:-30%;opacity:.12;background:radial-gradient(circle,#fff 0 8px,transparent 9px) 0 0/54px 54px;transform:rotate(8deg)}.end h2,.end p{position:relative}.sources a{font-weight:750}.source-note{padding:18px 20px;background:rgba(246,213,0,.22);border-left:5px solid var(--yellow)}
 .to-top{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:40;width:48px;height:48px;display:grid;place-items:center;border:3px solid var(--ink);border-radius:50%;background:var(--yellow);text-decoration:none;font-weight:950;box-shadow:4px 4px 0 var(--ink);opacity:0;visibility:hidden;transform:translateY(10px);transition:.2s ease}.to-top.visible{opacity:1;visibility:visible;transform:none}
-@media(max-width:900px){.intro-grid,.survival-head,.survival-body{grid-template-columns:minmax(0,1fr)}.intro-grid>div:first-child{max-width:none}.quote{position:static;width:100%}.survival-quote{margin-top:8px}.survival-note{grid-column:1}.card,.card:first-child,.card:last-child{grid-column:span 6}.impact-grid{grid-template-columns:repeat(2,1fr)}.map-intro,.world-head{grid-template-columns:1fr}.world-item{grid-template-columns:70px 1fr}.world-item>a{grid-column:2}}
-@media(max-width:620px){body{font-size:16px}.hero{padding-inline:16px;place-items:end center}.hero-card{padding:28px 22px;box-shadow:9px 9px 0 var(--red)}h1{font-size:clamp(3rem,16vw,4.5rem)}.hero-actions{display:grid}.hero-actions .button{width:100%}nav{justify-content:flex-start}.impact-grid{grid-template-columns:1fr}.timeline:before{left:19px}.titem{display:block;padding:0 0 30px 48px}.year{text-align:left;padding-bottom:8px;color:var(--red);font-size:1rem}.event{padding:18px;box-shadow:5px 5px 0 var(--yellow)}.event:before{left:-39px;top:-28px;width:16px;height:16px}.event-links{display:grid}.history-link{width:100%;justify-content:space-between}.timeline-photo{margin-inline:0}.timeline-photo img{max-height:none}.cards{display:block}.card,.card:first-child,.card:last-child{min-height:0;margin-bottom:22px}.art,.card:first-child .art,.card:last-child .art{height:180px}.quote{padding:30px 25px;border-radius:0 56px 0 56px}.japan-place-list{grid-template-columns:1fr}#kusama-map{height:62vh;min-height:430px;margin-inline:-6px}.world-item{grid-template-columns:1fr;gap:8px}.world-item>a{grid-column:1}.to-top{width:44px;height:44px}}
+@media(max-width:900px){.intro-grid,.pumpkin-head,.survival-head,.survival-body{grid-template-columns:minmax(0,1fr)}.intro-grid>div:first-child{max-width:none}.quote{position:static;width:100%}.pumpkin-testimony{margin-top:8px}.pumpkin-analysis{grid-template-columns:repeat(2,minmax(0,1fr))}.survival-quote{margin-top:8px}.survival-note{grid-column:1}.card,.card:first-child,.card:last-child{grid-column:span 6}.impact-grid{grid-template-columns:repeat(2,1fr)}.map-intro,.world-head{grid-template-columns:1fr}.world-item{grid-template-columns:70px 1fr}.world-item>a{grid-column:2}}
+@media(max-width:620px){body{font-size:16px}.hero{padding-inline:16px;place-items:end center}.hero-card{padding:28px 22px;box-shadow:9px 9px 0 var(--red)}h1{font-size:clamp(3rem,16vw,4.5rem)}.hero-actions{display:grid}.hero-actions .button{width:100%}nav{justify-content:flex-start}.pumpkin-analysis,.impact-grid{grid-template-columns:1fr}.pumpkin-conclusion{align-items:flex-start;padding:18px}.timeline:before{left:19px}.titem{display:block;padding:0 0 30px 48px}.year{text-align:left;padding-bottom:8px;color:var(--red);font-size:1rem}.event{padding:18px;box-shadow:5px 5px 0 var(--yellow)}.event:before{left:-39px;top:-28px;width:16px;height:16px}.event-links{display:grid}.history-link{width:100%;justify-content:space-between}.timeline-photo{margin-inline:0}.timeline-photo img{max-height:none}.cards{display:block}.card,.card:first-child,.card:last-child{min-height:0;margin-bottom:22px}.art,.card:first-child .art,.card:last-child .art{height:180px}.quote{padding:30px 25px;border-radius:0 56px 0 56px}.japan-place-list{grid-template-columns:1fr}#kusama-map{height:62vh;min-height:430px;margin-inline:-6px}.world-item{grid-template-columns:1fr;gap:8px}.world-item>a{grid-column:1}.to-top{width:44px;height:44px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 @media print{nav,.progress,.to-top,.hero-actions{display:none}.hero{min-height:auto}.card{break-inside:avoid}}
 </style>
@@ -210,6 +223,7 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
 
 <nav>
   <a href="#life">她的一生</a>
+  <a href="#pumpkin-memory">南瓜記憶</a>
   <a href="#survival">藝術與心靈</a>
   <a href="#impact">影響與意義</a>
   <a href="#timeline">年譜</a>
@@ -233,11 +247,30 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
   </div>
 </section>
 
+<section class="pumpkin-memory" id="pumpkin-memory" aria-labelledby="pumpkin-title">
+  <div class="pumpkin-inner">
+    <div class="pumpkin-head">
+      <div>
+        <div class="section-kicker">02 · PUMPKIN MEMORY</div>
+        <h2 id="pumpkin-title">一顆南瓜，如何從<br>童年走向世界？</h2>
+      </div>
+      <blockquote class="pumpkin-testimony">小學時，她與祖父走進家族的採種場；一顆近似人頭大小的南瓜，在她眼前彷彿活了起來並開始說話。<cite>— 依草間彌生自傳回憶整理；事件細節應理解為她對童年感知經驗的敘述</cite></blockquote>
+    </div>
+    <div class="pumpkin-analysis">
+      <article class="pumpkin-point"><h3>家庭提供了最初的形狀</h3><p>草間家經營種苗與花卉事業。南瓜不是她後來為了建立品牌才挑選的符號，而是童年生活裡真實、低矮、可以觸摸的植物；藝術語言因此有一個非常具體的故鄉起點。</p></article>
+      <article class="pumpkin-point"><h3>幻視不只代表恐懼</h3><p>花朵、網目與圓點的增殖常令她感到被吞沒，南瓜卻帶來不同情緒。她形容南瓜樸實、幽默而安定，能為心靈帶來「詩意的平靜」；它像是在混亂中可以反覆返回的安全形象。</p></article>
+      <article class="pumpkin-point"><h3>它也是另一種自畫像</h3><p>圓潤身體既親切又略帶怪誕，外表不完美卻擁有頑強生命力。南瓜因此不只是靜物，更像草間對自己的投射：孤獨、古怪、容易被低估，同時又堅定地佔據空間。</p></article>
+      <article class="pumpkin-point"><h3>私人記憶成為公共地標</h3><p>當童年的小南瓜被放大、覆滿圓點並移到海邊、廣場與博物館，它就從只有藝術家能感受到的內在形象，轉變成所有人都能靠近、繞行與共同記住的公共經驗。</p></article>
+    </div>
+    <p class="pumpkin-conclusion">南瓜的意義不只是「可愛」。它把家庭產業、祖父陪伴、特殊感知、心靈安定與旺盛生命力疊在同一個形體中——草間彌生將一段極私人的童年記憶，轉化成跨越語言與國界的共同符號。</p>
+  </div>
+</section>
+
 <section class="survival" id="survival" aria-labelledby="survival-title">
   <div class="survival-inner">
     <div class="survival-head">
       <div>
-        <div class="section-kicker">02 · ART &amp; SURVIVAL</div>
+        <div class="section-kicker">03 · ART &amp; SURVIVAL</div>
         <h2 id="survival-title">藝術，作為<br>活下去的方法。</h2>
       </div>
       <blockquote class="survival-quote">「我之所以能活到今天，沒有自殺，是因為我把藝術當成抵禦疾病的盾牌。」<cite>— 草間彌生，2000 年接受 Damien Hirst 訪談</cite></blockquote>
@@ -260,7 +293,7 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
 
 <section class="impact" id="impact">
   <div class="impact-inner">
-    <div class="section-kicker">03 · IMPACT</div>
+    <div class="section-kicker">04 · IMPACT</div>
     <h2>她如何改變日本的<br>藝術與設計視野？</h2>
     <div class="impact-grid">
       <article class="impact-card"><span>ART HISTORY</span><h3>把日本前衛放進世界藝術史</h3><p>她在 1950、60 年代直接進入紐約前衛現場，以無限網、軟雕塑、裝置與行為藝術建立位置，讓日本藝術家不只是西方潮流的追隨者，而是共同定義當代藝術的人。</p></article>
@@ -272,7 +305,7 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
 </section>
 
 <section id="timeline">
-  <div class="section-kicker">04 · TIMELINE</div>
+  <div class="section-kicker">05 · TIMELINE</div>
   <h2>97年的創作年譜</h2>
   <div class="timeline">
     <div class="titem"><div class="year">1929</div><div class="event"><strong>出生於松本</strong><br>3月22日出生於長野縣松本市。童年開始以繪畫回應幻視經驗。</div></div>
@@ -299,7 +332,7 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
 
 <div class="works" id="works">
   <div class="works-inner">
-    <div class="section-kicker" style="color:#f6d500">05 · MASTERWORKS</div>
+    <div class="section-kicker" style="color:#f6d500">06 · MASTERWORKS</div>
     <h2>六件作品，走進她的無限</h2>
     <p>以下圖像為幾何示意，不重製作品照片。點選卡片中的館方連結，可查看作品原始資料與正式影像。</p>
     <div class="cards">
@@ -317,13 +350,13 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
   <div class="locations-inner">
     <div class="map-intro">
       <div>
-        <div class="section-kicker">06 · ART MAP</div>
-        <h2 id="locations-title">在日本，遇見她的作品</h2>
+        <div class="section-kicker">07 · ART MAP</div>
+        <h2 id="locations-title">在日本與臺灣，<br>遇見她的作品</h2>
       </div>
       <p>地圖標示具代表性的常設或長期展示地點。點選圓點或下方項目，可查看作品、所在地與官方資料；實際開放狀態仍請在出發前確認。</p>
     </div>
-    <div id="kusama-map" role="region" aria-label="草間彌生日本重要裝置藝術位置互動地圖"></div>
-    <div class="japan-place-list" aria-label="日本作品位置列表">
+    <div id="kusama-map" role="region" aria-label="草間彌生日本與臺灣重要裝置藝術位置互動地圖"></div>
+    <div class="japan-place-list" aria-label="日本與臺灣作品位置列表">
       <button class="place-card" type="button" data-place="0" aria-pressed="false"><span class="place-num">1</span><span><strong>《幻之華》</strong><small>長野縣松本市美術館 · 2002</small><span class="place-url">https://matsumoto-artmuse.jp/en/visit/facility/floormap/</span></span></button>
       <button class="place-card" type="button" data-place="1" aria-pressed="false"><span class="place-num">2</span><span><strong>《花咲ける妻有》</strong><small>新潟縣越後妻有・農舞台 · 2003</small><span class="place-url">https://www.echigo-tsumari.jp/en/art/artwork/tsumari_in_bloom/</span></span></button>
       <button class="place-card" type="button" data-place="2" aria-pressed="false"><span class="place-num">3</span><span><strong>《愛はとこしえ十和田でうたう》</strong><small>青森縣十和田市現代美術館藝術廣場 · 2010</small><span class="place-url">https://towadaartcenter.com/zh-hant/collection/love-forever-singing-in-towada/</span></span></button>
@@ -331,7 +364,11 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
       <button class="place-card" type="button" data-place="4" aria-pressed="false"><span class="place-num">5</span><span><strong>《赤南瓜》</strong><small>香川縣直島・宮浦港 · 2006</small><span class="place-url">https://benesse-artsite.jp/en/stay/benessehouse/program/03.html</span></span></button>
       <button class="place-card" type="button" data-place="5" aria-pressed="false"><span class="place-num">6</span><span><strong>《南瓜》</strong><small>福岡市美術館戶外廣場 · 1994</small><span class="place-url">https://www.fukuoka-art-museum.jp/collection_highlight/2656/</span></span></button>
       <button class="place-card" type="button" data-place="6" aria-pressed="false"><span class="place-num">7</span><span><strong>《High Heel》</strong><small>鹿兒島縣霧島藝術之森 · 2002</small><span class="place-url">https://open-air-museum.org/en/inside_art_works/inside_art_works-690</span></span></button>
+      <button class="place-card" type="button" data-place="7" aria-pressed="false"><span class="place-num">8</span><span><strong>《我的未來坐在岩石上》</strong><small>臺灣・屏東農業科技園區 · 2010</small><span class="place-url">https://www.atp.gov.tw/CHT/cl01051.aspx</span></span></button>
+      <button class="place-card" type="button" data-place="8" aria-pressed="false"><span class="place-num">9</span><span><strong>《讓我心中所有夢想飛向天空》</strong><small>臺灣・屏東農業科技園區觀賞水族展示廳前 · 2013</small><span class="place-url">https://www.atp.gov.tw/CHT/cl01051.aspx</span></span></button>
+      <button class="place-card" type="button" data-place="9" aria-pressed="false"><span class="place-num">10</span><span><strong>《南瓜精靈》</strong><small>臺灣・嘉義故宮南院東翼戶外庭園 · 2017</small><span class="place-url">https://south.npm.gov.tw/Visit/ParkIntroduction/PublicArt.htm</span></span></button>
     </div>
+    <p class="source-note" style="margin-top:22px">臺灣觀看提醒：臺北市立美術館典藏《圓點的強迫妄想》，但「典藏」不代表目前常態展出，因此不列為可直接前往觀看的地圖點。<a href="https://www.tfam.museum/Collection/CollectionDetail.aspx?CID=3369&amp;ddlLang=zh-tw" target="_blank" rel="noopener noreferrer">查看北美館典藏資料 ↗</a></p>
 
     <div class="world-list">
       <div class="world-head">
@@ -350,7 +387,7 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
 </section>
 
 <section id="legacy">
-  <div class="section-kicker">07 · LEGACY</div>
+  <div class="section-kicker">08 · LEGACY</div>
   <h2>她留下的不只是圓點。</h2>
   <div class="legacy-grid">
     <div class="legacy-box"><b>把心理經驗變成形式</b><p>她沒有把幻視只當成私人苦痛，而是把「重複、增殖、自我消滅」轉化成一套完整藝術語言。</p></div>
@@ -365,7 +402,7 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
 </section>
 
 <section id="sources">
-  <div class="section-kicker">08 · SOURCES</div>
+  <div class="section-kicker">09 · SOURCES</div>
   <h2>資料來源</h2>
   <ol class="sources">
     <li><a href="https://yayoi-kusama.jp/en/news4518/" target="_blank" rel="noopener">草間彌生官方網站：逝世公告</a>（2026-08-27）。</li>
@@ -377,6 +414,12 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
     <li><a href="https://whitney.org/media/844" target="_blank" rel="noopener">Whitney Museum：No. A.B. 語音導覽</a>，童年幻視、無限網與《Infinity Net》自傳引文。</li>
     <li><a href="https://hirshhorn.si.edu/kusama/infinity-rooms/" target="_blank" rel="noopener">Hirshhorn Museum / Smithsonian：Infinity Mirror Rooms</a>。</li>
     <li><a href="https://benesse-artsite.jp/en/story/20220930-2466.html" target="_blank" rel="noopener">Benesse Art Site Naoshima：Pumpkin 與直島設置歷史</a>。</li>
+    <li><a href="https://hirshhorn.si.edu/kusama/the-exhibition/" target="_blank" rel="noopener">Smithsonian Hirshhorn：Yayoi Kusama’s Pumpkin</a>，南瓜帶來的平靜、生命能量與「另類自畫像」意義。</li>
+    <li><a href="https://www.ngv.vic.gov.au/exhibition/yayoi-kusama/" target="_blank" rel="noopener">National Gallery of Victoria：Yayoi Kusama</a>，童年與祖父前往採種場、首次看見南瓜的回憶。</li>
+    <li><a href="https://www.atp.gov.tw/CHT/cl01051.aspx" target="_blank" rel="noopener">農業部農業科技園區管理中心：公共藝術</a>，屏東園區草間彌生公共藝術與創作說明。</li>
+    <li><a href="https://south.npm.gov.tw/Visit/ParkIntroduction/PublicArt.htm" target="_blank" rel="noopener">國立故宮博物院南部院區：公共藝術</a>，《南瓜精靈》材質、尺寸與作品介紹。</li>
+    <li><a href="https://tcmb.culture.tw/zh-tw/detail?id=6577&amp;indexCode=v_efa_works" target="_blank" rel="noopener">國家文化記憶庫：《南瓜精靈》</a>，設置位置、創作年代與座標資料。</li>
+    <li><a href="https://www.tfam.museum/Collection/CollectionDetail.aspx?CID=3369&amp;ddlLang=zh-tw" target="_blank" rel="noopener">臺北市立美術館：《圓點的強迫妄想》典藏資料</a>；典藏不等於目前展出。</li>
   </ol>
   <p class="sources source-note">註：本頁作品視覺為原創幾何示意，不重製作品照片；作品名稱、年代與生平內容依上述官方、館方及新聞來源整理。</p>
 </section>
@@ -412,7 +455,10 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
     {name:'南瓜', city:'香川縣直島・Benesse House Museum', year:'2022 再製作', lat:34.4497, lng:133.9907, url:'https://benesse-artsite.jp/en/special2022/pumpkin.html'},
     {name:'赤南瓜', city:'香川縣直島・宮浦港', year:'2006', lat:34.4597, lng:133.9726, url:'https://benesse-artsite.jp/en/stay/benessehouse/program/03.html'},
     {name:'南瓜', city:'福岡市美術館戶外廣場', year:'1994', lat:33.5860, lng:130.3801, url:'https://www.fukuoka-art-museum.jp/collection_highlight/2656/'},
-    {name:'High Heel', city:'鹿兒島縣霧島藝術之森', year:'2002', lat:31.9522, lng:130.7530, url:'https://open-air-museum.org/en/inside_art_works/inside_art_works-690'}
+    {name:'High Heel', city:'鹿兒島縣霧島藝術之森', year:'2002', lat:31.9522, lng:130.7530, url:'https://open-air-museum.org/en/inside_art_works/inside_art_works-690'},
+    {name:'我的未來坐在岩石上', city:'臺灣・屏東農業科技園區', year:'2010', lat:22.71461, lng:120.53317, url:'https://www.atp.gov.tw/CHT/cl01051.aspx'},
+    {name:'讓我心中所有夢想飛向天空', city:'臺灣・屏東農業科技園區觀賞水族展示廳前', year:'2013', lat:22.7173, lng:120.5267, url:'https://www.atp.gov.tw/CHT/cl01051.aspx'},
+    {name:'南瓜精靈', city:'臺灣・嘉義故宮南院東翼戶外庭園', year:'2017', lat:23.470421, lng:120.29138, url:'https://south.npm.gov.tw/Visit/ParkIntroduction/PublicArt.htm'}
   ];
 
   function initMap() {
@@ -438,7 +484,7 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
       card.addEventListener('click', () => {
         const index = Number(card.dataset.place);
         document.querySelectorAll('.place-card').forEach(item => item.setAttribute('aria-pressed', String(item === card)));
-        map.flyTo([places[index].lat, places[index].lng], index === 3 || index === 4 ? 13 : 10, {duration:.8});
+        map.flyTo([places[index].lat, places[index].lng], index === 3 || index === 4 || index >= 7 ? 13 : 10, {duration:.8});
         markers[index].openPopup();
       });
     });
