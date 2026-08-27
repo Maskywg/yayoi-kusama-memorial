@@ -203,10 +203,12 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
 .world-list{margin-top:clamp(72px,9vw,110px)}.world-head{display:grid;grid-template-columns:1fr minmax(260px,420px);gap:40px;align-items:end}.world-head p{margin:0 0 24px;color:var(--muted)}.world-items{margin-top:28px;border-top:3px solid var(--ink)}.world-item{display:grid;grid-template-columns:80px minmax(0,1fr) minmax(260px,.75fr);gap:22px;padding:24px 4px;border-bottom:1px solid rgba(17,17,17,.28);align-items:start}.world-country{font-size:.78rem;letter-spacing:.08em;font-weight:950;color:var(--red)}.world-item h3{margin:0;font-size:1.12rem;line-height:1.4}.world-item p{margin:5px 0 0;color:var(--muted);font-size:.9rem}.world-item a{font-size:.82rem;font-weight:850;overflow-wrap:anywhere}
 .end:before{content:"";position:absolute;inset:-30%;opacity:.12;background:radial-gradient(circle,#fff 0 8px,transparent 9px) 0 0/54px 54px;transform:rotate(8deg)}.end h2,.end p{position:relative}.sources a{font-weight:750}.source-note{padding:18px 20px;background:rgba(246,213,0,.22);border-left:5px solid var(--yellow)}
 .to-top{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:40;width:48px;height:48px;display:grid;place-items:center;border:3px solid var(--ink);border-radius:50%;background:var(--yellow);text-decoration:none;font-weight:950;box-shadow:4px 4px 0 var(--ink);opacity:0;visibility:hidden;transform:translateY(10px);transition:.2s ease}.to-top.visible{opacity:1;visibility:visible;transform:none}
+.music-toggle{position:fixed;left:max(18px,env(safe-area-inset-left));bottom:max(18px,env(safe-area-inset-bottom));z-index:42;display:flex;align-items:center;gap:9px;min-height:48px;padding:8px 14px 8px 9px;border:3px solid var(--ink);border-radius:999px;background:var(--paper);color:var(--ink);font:inherit;font-size:.78rem;font-weight:950;cursor:pointer;box-shadow:4px 4px 0 var(--ink);transition:.18s transform,.18s background}.music-toggle:hover{transform:translateY(-2px)}.music-toggle[aria-pressed="true"]{background:var(--yellow)}.music-toggle.needs-action{animation:music-pulse 1.8s ease-in-out 2}.music-icon{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--red);color:#fff;font-size:1rem}.music-toggle[aria-pressed="true"] .music-icon:after{content:"";width:9px;height:9px;background:#fff}.music-toggle[aria-pressed="true"] .music-icon{font-size:0}
+@keyframes music-pulse{50%{box-shadow:4px 4px 0 var(--ink),0 0 0 8px rgba(227,41,32,.24)}}
 @media(max-width:900px){.intro-grid,.pumpkin-head,.survival-head,.survival-body{grid-template-columns:minmax(0,1fr)}.intro-grid>div:first-child{max-width:none}.quote{position:static;width:100%}.pumpkin-testimony{margin-top:8px}.pumpkin-analysis{grid-template-columns:repeat(2,minmax(0,1fr))}.survival-quote{margin-top:8px}.survival-note{grid-column:1}.card,.card:first-child,.card:last-child{grid-column:span 6}.impact-grid{grid-template-columns:repeat(2,1fr)}.map-intro,.world-head{grid-template-columns:1fr}.world-item{grid-template-columns:70px 1fr}.world-item>a{grid-column:2}}
-@media(max-width:620px){body{font-size:16px}.hero{padding-inline:16px;place-items:end center}.hero-card{padding:28px 22px;box-shadow:9px 9px 0 var(--red)}h1{font-size:clamp(3rem,16vw,4.5rem)}.hero-actions{display:grid}.hero-actions .button{width:100%}nav{justify-content:flex-start}.pumpkin-visual{margin-top:34px;box-shadow:7px 7px 0 var(--red)}.pumpkin-analysis,.impact-grid{grid-template-columns:1fr}.pumpkin-conclusion{align-items:flex-start;padding:18px}.timeline:before{left:19px}.titem{display:block;padding:0 0 30px 48px}.year{text-align:left;padding-bottom:8px;color:var(--red);font-size:1rem}.event{padding:18px;box-shadow:5px 5px 0 var(--yellow)}.event:before{left:-39px;top:-28px;width:16px;height:16px}.event-links{display:grid}.history-link{width:100%;justify-content:space-between}.timeline-photo{margin-inline:0}.timeline-photo img{max-height:none}.cards{display:block}.card,.card:first-child,.card:last-child{min-height:0;margin-bottom:22px}.art,.card:first-child .art,.card:last-child .art{height:180px}.quote{padding:30px 25px;border-radius:0 56px 0 56px}.japan-place-list{grid-template-columns:1fr}#kusama-map{height:62vh;min-height:430px;margin-inline:-6px}.world-item{grid-template-columns:1fr;gap:8px}.world-item>a{grid-column:1}.to-top{width:44px;height:44px}}
+@media(max-width:620px){body{font-size:16px}.hero{padding-inline:16px;place-items:end center}.hero-card{padding:28px 22px;box-shadow:9px 9px 0 var(--red)}h1{font-size:clamp(3rem,16vw,4.5rem)}.hero-actions{display:grid}.hero-actions .button{width:100%}nav{justify-content:flex-start}.pumpkin-visual{margin-top:34px;box-shadow:7px 7px 0 var(--red)}.pumpkin-analysis,.impact-grid{grid-template-columns:1fr}.pumpkin-conclusion{align-items:flex-start;padding:18px}.timeline:before{left:19px}.titem{display:block;padding:0 0 30px 48px}.year{text-align:left;padding-bottom:8px;color:var(--red);font-size:1rem}.event{padding:18px;box-shadow:5px 5px 0 var(--yellow)}.event:before{left:-39px;top:-28px;width:16px;height:16px}.event-links{display:grid}.history-link{width:100%;justify-content:space-between}.timeline-photo{margin-inline:0}.timeline-photo img{max-height:none}.cards{display:block}.card,.card:first-child,.card:last-child{min-height:0;margin-bottom:22px}.art,.card:first-child .art,.card:last-child .art{height:180px}.quote{padding:30px 25px;border-radius:0 56px 0 56px}.japan-place-list{grid-template-columns:1fr}#kusama-map{height:62vh;min-height:430px;margin-inline:-6px}.world-item{grid-template-columns:1fr;gap:8px}.world-item>a{grid-column:1}.music-toggle{min-height:44px;padding:6px 11px 6px 7px}.music-icon{width:26px;height:26px}.to-top{width:44px;height:44px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
-@media print{nav,.progress,.to-top,.hero-actions{display:none}.hero{min-height:auto}.card{break-inside:avoid}}
+@media print{nav,.progress,.to-top,.music-toggle,.hero-actions{display:none}.hero{min-height:auto}.card{break-inside:avoid}}
 </style>
 </head>
 <body>
@@ -437,6 +439,8 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
   A Tribute to Yayoi Kusama · 1929–2026 · 本頁為非官方紀念網頁
 </footer>
 <a class="to-top" href="#top" aria-label="回到頁首">↑</a>
+<audio id="background-music" src="The%20Day%20the%20Pumpkin%20Spoke.mp3" autoplay loop preload="metadata" playsinline></audio>
+<button class="music-toggle" type="button" aria-controls="background-music" aria-pressed="false" aria-label="播放背景音樂：The Day the Pumpkin Spoke" title="The Day the Pumpkin Spoke"><span class="music-icon" aria-hidden="true">♪</span><span class="music-label">播放音樂</span></button>
 <script>
 (() => {
   const progress = document.querySelector('.progress span');
@@ -456,6 +460,48 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
   addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(updateUI); ticking = true; } }, {passive:true});
   addEventListener('resize', updateUI, {passive:true});
   updateUI();
+
+  const music = document.getElementById('background-music');
+  const musicToggle = document.querySelector('.music-toggle');
+  const musicLabel = musicToggle?.querySelector('.music-label');
+  let userPausedMusic = false;
+  function updateMusicUI() {
+    if (!music || !musicToggle || !musicLabel) return;
+    const isPlaying = !music.paused;
+    musicToggle.setAttribute('aria-pressed', String(isPlaying));
+    musicToggle.setAttribute('aria-label', `${isPlaying ? '暫停' : '播放'}背景音樂：The Day the Pumpkin Spoke`);
+    musicLabel.textContent = isPlaying ? '暫停音樂' : '播放音樂';
+    if (isPlaying) musicToggle.classList.remove('needs-action');
+  }
+  async function startMusic() {
+    if (!music || userPausedMusic) return;
+    try {
+      music.volume = .3;
+      await music.play();
+    } catch (_) {
+      musicToggle?.classList.add('needs-action');
+    }
+    updateMusicUI();
+  }
+  music?.addEventListener('play', updateMusicUI);
+  music?.addEventListener('pause', updateMusicUI);
+  musicToggle?.addEventListener('click', async () => {
+    if (music.paused) {
+      userPausedMusic = false;
+      await startMusic();
+    } else {
+      userPausedMusic = true;
+      music.pause();
+    }
+  });
+  const unlockMusic = event => {
+    if (event.target.closest?.('.music-toggle')) return;
+    startMusic();
+  };
+  addEventListener('pointerdown', unlockMusic, {once:true, passive:true});
+  addEventListener('keydown', unlockMusic, {once:true, passive:true});
+  updateMusicUI();
+  startMusic();
 
   const places = [
     {name:'幻之華', city:'長野縣松本市美術館', year:'2002', lat:36.2333, lng:137.9765, url:'https://matsumoto-artmuse.jp/en/visit/facility/floormap/'},
