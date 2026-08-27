@@ -168,6 +168,7 @@ body{font-size:17px;text-rendering:optimizeLegibility;-webkit-font-smoothing:ant
 nav{overflow-x:auto;scrollbar-width:none;border-bottom:1px solid rgba(255,255,255,.14)}nav::-webkit-scrollbar{display:none}nav a{white-space:nowrap;padding:6px 11px;border-radius:999px}nav a:hover,nav a[aria-current="true"]{background:var(--yellow);color:var(--ink)}
 section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);gap:clamp(34px,7vw,88px)}.intro-grid>div:first-child{max-width:720px}.quote{position:sticky;top:96px;box-shadow:10px 10px 0 var(--yellow)}.quote small{display:block;margin-top:16px;color:#bbb6ac;font-family:inherit;font-size:.72em}
 .impact{max-width:none;background:var(--yellow);border-block:4px solid var(--ink)}.impact-inner{max-width:1120px;margin:auto;padding:clamp(72px,9vw,110px) 24px}.impact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:38px}.impact-card{background:var(--paper);border:3px solid var(--ink);padding:24px;box-shadow:7px 7px 0 var(--red)}.impact-card span{display:block;margin-bottom:22px;font-size:.78rem;font-weight:950;letter-spacing:.12em}.impact-card h3{margin:0;font-size:1.25rem;line-height:1.35}.impact-card p{margin:.8em 0 0;font-size:.94rem;line-height:1.7;color:#403b34}
+.survival{max-width:none;background:var(--ink);color:#fff}.survival-inner{max-width:1120px;margin:auto;padding:clamp(76px,10vw,126px) 24px}.survival .section-kicker{color:var(--yellow)}.survival-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(310px,.72fr);gap:clamp(38px,7vw,84px);align-items:end}.survival-head h2{margin-bottom:0}.survival-quote{margin:0;padding:28px 28px 26px;border:3px solid #fff;background:var(--red);box-shadow:9px 9px 0 var(--yellow);font-family:"Yu Mincho","Noto Serif TC",serif;font-size:clamp(1.2rem,2.2vw,1.55rem);line-height:1.65}.survival-quote cite{display:block;margin-top:15px;font-family:inherit;font-size:.68em;font-style:normal;color:#ffe9e6}.survival-body{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(38px,7vw,76px);margin-top:54px}.survival-body p{margin:0 0 1.35em;color:#dedbd4}.survival-body p:first-child{font-size:1.16rem;color:#fff}.survival-body strong{color:var(--yellow)}.survival-note{grid-column:1/-1;margin-top:12px!important;padding:17px 20px;border-left:5px solid var(--yellow);background:rgba(255,255,255,.08);font-size:.86rem!important;color:#c9c5bc!important}
 .timeline{max-width:1000px}.event{transition:.18s transform,.18s box-shadow}.event:hover{transform:translateY(-2px);box-shadow:9px 9px 0 var(--yellow)}.event strong{display:block;margin-bottom:3px}
 .works-inner>p{max-width:650px;color:#c5c0b8}.cards{grid-template-columns:repeat(12,1fr);gap:24px}.card{grid-column:span 4;min-height:430px}.card:first-child,.card:last-child{grid-column:span 8}.card:hover{box-shadow:0 14px 0 var(--red)}.card:first-child .art,.card:last-child .art{height:220px}.art:after{content:attr(data-index);position:absolute;right:14px;bottom:2px;font-size:3rem;line-height:1;font-weight:950;letter-spacing:-.08em;color:rgba(17,17,17,.8)}
 .legacy-grid{counter-reset:legacy}.legacy-box{position:relative;counter-increment:legacy}.legacy-box:after{content:"0" counter(legacy);position:absolute;right:18px;top:8px;font-size:3rem;font-weight:950;color:rgba(17,17,17,.11)}.legacy-box b{display:block;max-width:78%}
@@ -177,7 +178,7 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
 .world-list{margin-top:clamp(72px,9vw,110px)}.world-head{display:grid;grid-template-columns:1fr minmax(260px,420px);gap:40px;align-items:end}.world-head p{margin:0 0 24px;color:var(--muted)}.world-items{margin-top:28px;border-top:3px solid var(--ink)}.world-item{display:grid;grid-template-columns:80px minmax(0,1fr) minmax(260px,.75fr);gap:22px;padding:24px 4px;border-bottom:1px solid rgba(17,17,17,.28);align-items:start}.world-country{font-size:.78rem;letter-spacing:.08em;font-weight:950;color:var(--red)}.world-item h3{margin:0;font-size:1.12rem;line-height:1.4}.world-item p{margin:5px 0 0;color:var(--muted);font-size:.9rem}.world-item a{font-size:.82rem;font-weight:850;overflow-wrap:anywhere}
 .end:before{content:"";position:absolute;inset:-30%;opacity:.12;background:radial-gradient(circle,#fff 0 8px,transparent 9px) 0 0/54px 54px;transform:rotate(8deg)}.end h2,.end p{position:relative}.sources a{font-weight:750}.source-note{padding:18px 20px;background:rgba(246,213,0,.22);border-left:5px solid var(--yellow)}
 .to-top{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:40;width:48px;height:48px;display:grid;place-items:center;border:3px solid var(--ink);border-radius:50%;background:var(--yellow);text-decoration:none;font-weight:950;box-shadow:4px 4px 0 var(--ink);opacity:0;visibility:hidden;transform:translateY(10px);transition:.2s ease}.to-top.visible{opacity:1;visibility:visible;transform:none}
-@media(max-width:900px){.intro-grid{grid-template-columns:minmax(0,1fr)}.intro-grid>div:first-child{max-width:none}.quote{position:static;width:100%}.card,.card:first-child,.card:last-child{grid-column:span 6}.impact-grid{grid-template-columns:repeat(2,1fr)}.map-intro,.world-head{grid-template-columns:1fr}.world-item{grid-template-columns:70px 1fr}.world-item>a{grid-column:2}}
+@media(max-width:900px){.intro-grid,.survival-head,.survival-body{grid-template-columns:minmax(0,1fr)}.intro-grid>div:first-child{max-width:none}.quote{position:static;width:100%}.survival-quote{margin-top:8px}.survival-note{grid-column:1}.card,.card:first-child,.card:last-child{grid-column:span 6}.impact-grid{grid-template-columns:repeat(2,1fr)}.map-intro,.world-head{grid-template-columns:1fr}.world-item{grid-template-columns:70px 1fr}.world-item>a{grid-column:2}}
 @media(max-width:620px){body{font-size:16px}.hero{padding-inline:16px;place-items:end center}.hero-card{padding:28px 22px;box-shadow:9px 9px 0 var(--red)}h1{font-size:clamp(3rem,16vw,4.5rem)}.hero-actions{display:grid}.hero-actions .button{width:100%}nav{justify-content:flex-start}.impact-grid{grid-template-columns:1fr}.timeline:before{left:19px}.titem{display:block;padding:0 0 30px 48px}.year{text-align:left;padding-bottom:8px;color:var(--red);font-size:1rem}.event{padding:18px;box-shadow:5px 5px 0 var(--yellow)}.event:before{left:-39px;top:-28px;width:16px;height:16px}.cards{display:block}.card,.card:first-child,.card:last-child{min-height:0;margin-bottom:22px}.art,.card:first-child .art,.card:last-child .art{height:180px}.quote{padding:30px 25px;border-radius:0 56px 0 56px}.japan-place-list{grid-template-columns:1fr}#kusama-map{height:62vh;min-height:430px;margin-inline:-6px}.world-item{grid-template-columns:1fr;gap:8px}.world-item>a{grid-column:1}.to-top{width:44px;height:44px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 @media print{nav,.progress,.to-top,.hero-actions{display:none}.hero{min-height:auto}.card{break-inside:avoid}}
@@ -202,6 +203,7 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
 
 <nav>
   <a href="#life">她的一生</a>
+  <a href="#survival">藝術與心靈</a>
   <a href="#impact">影響與意義</a>
   <a href="#timeline">年譜</a>
   <a href="#works">代表作品</a>
@@ -224,9 +226,34 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
   </div>
 </section>
 
+<section class="survival" id="survival" aria-labelledby="survival-title">
+  <div class="survival-inner">
+    <div class="survival-head">
+      <div>
+        <div class="section-kicker">02 · ART &amp; SURVIVAL</div>
+        <h2 id="survival-title">藝術，作為<br>活下去的方法。</h2>
+      </div>
+      <blockquote class="survival-quote">「我之所以能活到今天，沒有自殺，是因為我把藝術當成抵禦疾病的盾牌。」<cite>— 草間彌生，2000 年接受 Damien Hirst 訪談</cite></blockquote>
+    </div>
+    <div class="survival-body">
+      <div>
+        <p>草間彌生不只是在畫圓點。對她而言，創作不是藝術家浪漫的情懷，而是面對恐懼、維持生命秩序的一種方法。</p>
+        <p>從童年開始，她便經歷強烈的幻視：桌布上的花朵會蔓延到牆壁、天花板與自己的身體；圓點、網目和閃爍的光反覆增殖，彷彿要吞沒她與現實世界的邊界。</p>
+        <p>她選擇把這些只有自己看得見的景象畫下來。一遍又一遍地描繪、縫製與排列，將腦海中失去控制的影像轉移到畫布、雕塑與空間。當恐懼成為可以觀看的形式，她也從被幻象支配的人，轉變為決定作品節奏的創作者。</p>
+      </div>
+      <div>
+        <p>但這不只是「控制」。她以<strong>自我消融（self-obliteration）</strong>描述另一種狀態：當圓點與網目無限延伸，個人的身體、身份與痛苦也逐漸融入更龐大的宇宙。她一方面試圖逃離幻象，另一方面又主動走進其中，把它建造成所有觀眾都能共同進入的世界。</p>
+        <p>因此，圓點並不只是可愛的裝飾，無限鏡屋也不只是夢幻的拍照空間。它們記錄了一個人如何長年與恐懼、孤獨和強迫性意象共存。她沒有等到黑暗消失才創作，而是在黑暗仍然存在時，日復一日拿起畫筆。</p>
+        <p><strong>她最震撼人的地方，不是徹底戰勝了內心的黑暗，而是把原本可能吞噬自己的景象，改造成足以容納全世界的「無限宇宙」。</strong></p>
+      </div>
+      <p class="survival-note">說明：「如果不是為了藝術，我早就自殺了」是廣為引用的譯句。這裡採用她在訪談中更可核對的直接表述。她曾把繪畫形容為療癒自己的方式，但不宜將其創作簡化為臨床定義下的「藝術治療」，也不宜把精神痛苦浪漫化為天才的來源。</p>
+    </div>
+  </div>
+</section>
+
 <section class="impact" id="impact">
   <div class="impact-inner">
-    <div class="section-kicker">02 · IMPACT</div>
+    <div class="section-kicker">03 · IMPACT</div>
     <h2>她如何改變日本的<br>藝術與設計視野？</h2>
     <div class="impact-grid">
       <article class="impact-card"><span>ART HISTORY</span><h3>把日本前衛放進世界藝術史</h3><p>她在 1950、60 年代直接進入紐約前衛現場，以無限網、軟雕塑、裝置與行為藝術建立位置，讓日本藝術家不只是西方潮流的追隨者，而是共同定義當代藝術的人。</p></article>
@@ -238,7 +265,7 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
 </section>
 
 <section id="timeline">
-  <div class="section-kicker">03 · TIMELINE</div>
+  <div class="section-kicker">04 · TIMELINE</div>
   <h2>97年的創作年譜</h2>
   <div class="timeline">
     <div class="titem"><div class="year">1929</div><div class="event"><strong>出生於松本</strong><br>3月22日出生於長野縣松本市。童年開始以繪畫回應幻視經驗。</div></div>
@@ -263,7 +290,7 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
 
 <div class="works" id="works">
   <div class="works-inner">
-    <div class="section-kicker" style="color:#f6d500">04 · MASTERWORKS</div>
+    <div class="section-kicker" style="color:#f6d500">05 · MASTERWORKS</div>
     <h2>六件作品，走進她的無限</h2>
     <p>以下圖像為幾何示意，不重製作品照片。點選卡片中的館方連結，可查看作品原始資料與正式影像。</p>
     <div class="cards">
@@ -281,7 +308,7 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
   <div class="locations-inner">
     <div class="map-intro">
       <div>
-        <div class="section-kicker">05 · ART MAP</div>
+        <div class="section-kicker">06 · ART MAP</div>
         <h2 id="locations-title">在日本，遇見她的作品</h2>
       </div>
       <p>地圖標示具代表性的常設或長期展示地點。點選圓點或下方項目，可查看作品、所在地與官方資料；實際開放狀態仍請在出發前確認。</p>
@@ -314,7 +341,7 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
 </section>
 
 <section id="legacy">
-  <div class="section-kicker">06 · LEGACY</div>
+  <div class="section-kicker">07 · LEGACY</div>
   <h2>她留下的不只是圓點。</h2>
   <div class="legacy-grid">
     <div class="legacy-box"><b>把心理經驗變成形式</b><p>她沒有把幻視只當成私人苦痛，而是把「重複、增殖、自我消滅」轉化成一套完整藝術語言。</p></div>
@@ -329,13 +356,16 @@ section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:m
 </section>
 
 <section id="sources">
-  <div class="section-kicker">07 · SOURCES</div>
+  <div class="section-kicker">08 · SOURCES</div>
   <h2>資料來源</h2>
   <ol class="sources">
     <li><a href="https://yayoi-kusama.jp/en/news4518/" target="_blank" rel="noopener">草間彌生官方網站：逝世公告</a>（2026-08-27）。</li>
     <li><a href="https://yayoi-kusama.jp/en/biography/" target="_blank" rel="noopener">草間彌生官方網站：Biography</a>。</li>
     <li><a href="https://apnews.com/article/f92e15d5e6a446f48f3675ddd2418b8a" target="_blank" rel="noopener">Associated Press：Yayoi Kusama dies at 97 in Tokyo</a>（2026-08-27）。</li>
     <li><a href="https://www.moma.org/artists/3315" target="_blank" rel="noopener">The Museum of Modern Art：Yayoi Kusama</a>，含 No. F、Accumulation No. 1 與 Narcissus Garden 相關資料。</li>
+    <li><a href="https://www.theguardian.com/theobserver/2000/jan/16/life1.lifemagazine1" target="_blank" rel="noopener">The Guardian / The Observer：Damien Hirst 專訪草間彌生</a>（2000），藝術作為「盾牌」與療癒方式的直接陳述。</li>
+    <li><a href="https://hirshhorn.si.edu/explore/obliterate-yourself/" target="_blank" rel="noopener">Smithsonian Hirshhorn：Obliterate Yourself!</a>，幻視、重複創作與自我消融概念。</li>
+    <li><a href="https://whitney.org/media/844" target="_blank" rel="noopener">Whitney Museum：No. A.B. 語音導覽</a>，童年幻視、無限網與《Infinity Net》自傳引文。</li>
     <li><a href="https://hirshhorn.si.edu/kusama/infinity-rooms/" target="_blank" rel="noopener">Hirshhorn Museum / Smithsonian：Infinity Mirror Rooms</a>。</li>
     <li><a href="https://benesse-artsite.jp/en/story/20220930-2466.html" target="_blank" rel="noopener">Benesse Art Site Naoshima：Pumpkin 與直島設置歷史</a>。</li>
   </ol>
