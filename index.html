@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>草間彌生｜無限之後仍是無限</title>
+<meta name="description" content="草間彌生（1929–2026）紀念頁：生涯年譜、代表作品與藝術精神。" />
+<meta name="theme-color" content="#f6d500" />
+<style>
+:root{
+  --yellow:#f6d500;
+  --red:#e32920;
+  --ink:#111;
+  --paper:#f8f3e8;
+  --white:#fff;
+  --muted:#6c685f;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
+  line-height:1.72;
+}
+a{color:inherit}
+.hero{
+  min-height:100vh;position:relative;overflow:hidden;
+  background:var(--yellow);
+  display:grid;place-items:center;padding:72px 24px;
+}
+.dots,.dots:before,.dots:after{
+  position:absolute;inset:-10%;content:"";
+  background-image:radial-gradient(circle,var(--ink) 0 9px,transparent 10px);
+  background-size:62px 62px;
+  transform:rotate(-7deg) scale(1.1);
+}
+.dots{opacity:.93;animation:drift 24s linear infinite}
+.dots:before{transform:translate(31px,31px) scale(.55);opacity:.34}
+.dots:after{
+  background-image:radial-gradient(circle,var(--red) 0 6px,transparent 7px);
+  background-size:43px 43px;opacity:.3;transform:rotate(13deg)
+}
+@keyframes drift{50%{transform:rotate(-4deg) scale(1.14) translate(18px,-12px)}}
+.hero-card{
+  position:relative;z-index:2;max-width:980px;width:100%;
+  background:rgba(248,243,232,.94);border:4px solid var(--ink);
+  box-shadow:18px 18px 0 var(--red);padding:clamp(28px,6vw,76px);
+}
+.eyebrow{font-size:.86rem;letter-spacing:.22em;font-weight:800}
+h1{font-size:clamp(3.4rem,10vw,8rem);line-height:.88;margin:.3em 0 .18em;letter-spacing:-.06em}
+.jp{font-family:serif;font-weight:500}
+.years{font-size:clamp(1.4rem,3vw,2.1rem);font-weight:900}
+.lead{font-size:clamp(1.08rem,2.2vw,1.38rem);max-width:720px;margin-top:28px}
+.scroll{display:inline-block;margin-top:30px;font-weight:800;text-decoration:none;border-bottom:3px solid}
+nav{
+  position:sticky;top:0;z-index:20;background:rgba(17,17,17,.94);color:white;
+  display:flex;justify-content:center;gap:24px;padding:12px 16px;backdrop-filter:blur(8px)
+}
+nav a{text-decoration:none;font-weight:700;font-size:.92rem}
+section{max-width:1120px;margin:auto;padding:92px 24px}
+.section-kicker{font-size:.8rem;letter-spacing:.2em;font-weight:900;color:var(--red)}
+h2{font-size:clamp(2.3rem,6vw,4.5rem);line-height:1;margin:.18em 0 .5em;letter-spacing:-.045em}
+.intro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
+.quote{
+  background:var(--ink);color:white;padding:34px;border-radius:0 80px 0 80px;
+  font-family:serif;font-size:1.35rem;line-height:1.7;position:relative
+}
+.quote:before{content:"●";color:var(--yellow);font-size:6rem;position:absolute;right:18px;top:-40px}
+.timeline{position:relative;margin-top:54px}
+.timeline:before{content:"";position:absolute;left:108px;top:0;bottom:0;width:4px;background:var(--ink)}
+.titem{display:grid;grid-template-columns:84px 1fr;gap:50px;position:relative;padding:0 0 44px}
+.year{font-size:1.35rem;font-weight:950;text-align:right}
+.event{background:white;border:2px solid var(--ink);padding:22px 24px;box-shadow:7px 7px 0 var(--yellow)}
+.event:before{
+  content:"";position:absolute;left:100px;top:18px;width:18px;height:18px;border-radius:50%;
+  background:var(--red);border:3px solid var(--ink)
+}
+.event strong{font-size:1.14rem}
+.works{background:#111;color:#fff;max-width:none}
+.works-inner{max-width:1120px;margin:auto;padding:92px 24px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:42px}
+.card{
+  background:#f8f3e8;color:#111;min-height:380px;border:3px solid #fff;
+  display:flex;flex-direction:column;overflow:hidden;transition:.25s transform
+}
+.card:hover{transform:translateY(-7px) rotate(-.4deg)}
+.art{height:168px;position:relative;overflow:hidden;border-bottom:3px solid #111}
+.art.net{background:
+  radial-gradient(circle at 20% 20%,#111 0 2px,transparent 3px) 0 0/15px 15px,
+  #ece8df}
+.art.soft{background:
+  radial-gradient(ellipse at center,#fff 0 26%,#111 28% 34%,transparent 36%) 0 0/52px 34px,
+  var(--red)}
+.art.mirror{background:
+  radial-gradient(circle,#e32920 0 7px,#fff 8px 13px,transparent 14px) 0 0/38px 38px,
+  linear-gradient(135deg,#bbb,#fff,#777,#fff)}
+.art.spheres{background:
+  radial-gradient(circle at 35% 30%,#fff 0 3px,#aaa 5px 19px,#333 20px 22px,transparent 23px) 0 0/56px 56px,
+  #d9d9d9}
+.art.pumpkin{background:var(--yellow)}
+.art.pumpkin:before{
+  content:"";position:absolute;width:140px;height:125px;border-radius:48% 48% 43% 43%;
+  background:
+  radial-gradient(circle,#111 0 4px,transparent 5px) 0 0/24px 24px,
+  var(--yellow);
+  border:7px solid #111;left:50%;top:20px;transform:translateX(-50%)
+}
+.art.soul{background:
+  radial-gradient(circle at 20% 25%,#f6d500 0 12px,transparent 13px),
+  radial-gradient(circle at 70% 60%,#e32920 0 18px,transparent 19px),
+  repeating-radial-gradient(circle at 50% 50%,#111 0 2px,#fff 3px 8px);
+}
+.card-body{padding:22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:1.35rem;line-height:1.25;margin:0}
+.card .date{font-weight:900;color:var(--red)}
+.card p{margin:0;color:#3c3934}
+.card a{margin-top:auto;font-size:.85rem;font-weight:900}
+.legacy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.legacy-box{border-top:8px solid var(--red);background:white;padding:26px}
+.legacy-box b{font-size:1.2rem}
+.end{
+  background:var(--red);color:white;text-align:center;max-width:none;padding:110px 24px;
+  position:relative;overflow:hidden
+}
+.end h2{font-family:serif;font-weight:500;max-width:820px;margin:auto}
+.end p{max-width:700px;margin:28px auto 0;font-size:1.1rem}
+.sources{font-size:.9rem;color:var(--muted)}
+.sources li{margin:.6em 0}
+footer{background:#111;color:#aaa;text-align:center;padding:32px 20px;font-size:.84rem}
+@media(max-width:800px){
+  .intro-grid,.cards,.legacy-grid{grid-template-columns:1fr}
+  .timeline:before{left:76px}
+  .titem{grid-template-columns:55px 1fr;gap:40px}
+  .event:before{left:68px}
+  .year{font-size:1rem}
+  nav{gap:14px;overflow:auto;justify-content:flex-start}
+}
+/* Editorial polish, accessibility and responsive refinements */
+body{font-size:17px;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+:focus-visible{outline:4px solid #2878ff;outline-offset:4px}
+.skip-link{position:fixed;top:12px;left:16px;z-index:100;background:#fff;padding:10px 16px;border:3px solid var(--ink);font-weight:900;transform:translateY(-160%)}
+.skip-link:focus{transform:none}
+.progress{position:fixed;inset:0 0 auto;height:4px;z-index:80;pointer-events:none}.progress span{display:block;width:0;height:100%;background:var(--red)}
+.hero:after{content:"";position:absolute;width:min(44vw,620px);aspect-ratio:1;right:-12vw;bottom:-22vw;border-radius:50%;background:var(--red);border:clamp(8px,1.2vw,18px) solid var(--ink)}
+.hero-card{isolation:isolate}.hero-card:before{content:"";position:absolute;right:clamp(18px,4vw,50px);top:clamp(18px,3vw,38px);width:clamp(36px,5vw,66px);aspect-ratio:1;border-radius:50%;background:var(--yellow);border:4px solid var(--ink);z-index:-1}
+.eyebrow,.section-kicker{display:flex;align-items:center;gap:12px}.eyebrow:before,.section-kicker:before{content:"";flex:0 0 38px;height:4px;background:currentColor}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:10px 18px;border:3px solid var(--ink);background:var(--ink);color:#fff;text-decoration:none;font-weight:900;transition:.18s transform,.18s box-shadow}.button.secondary{background:transparent;color:var(--ink)}.button:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--red)}.scroll{display:none}
+nav{overflow-x:auto;scrollbar-width:none;border-bottom:1px solid rgba(255,255,255,.14)}nav::-webkit-scrollbar{display:none}nav a{white-space:nowrap;padding:6px 11px;border-radius:999px}nav a:hover,nav a[aria-current="true"]{background:var(--yellow);color:var(--ink)}
+section{padding-block:clamp(76px,10vw,126px)}.intro-grid{grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);gap:clamp(34px,7vw,88px)}.intro-grid>div:first-child{max-width:720px}.quote{position:sticky;top:96px;box-shadow:10px 10px 0 var(--yellow)}.quote small{display:block;margin-top:16px;color:#bbb6ac;font-family:inherit;font-size:.72em}
+.impact{max-width:none;background:var(--yellow);border-block:4px solid var(--ink)}.impact-inner{max-width:1120px;margin:auto;padding:clamp(72px,9vw,110px) 24px}.impact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:38px}.impact-card{background:var(--paper);border:3px solid var(--ink);padding:24px;box-shadow:7px 7px 0 var(--red)}.impact-card span{display:block;margin-bottom:22px;font-size:.78rem;font-weight:950;letter-spacing:.12em}.impact-card h3{margin:0;font-size:1.25rem;line-height:1.35}.impact-card p{margin:.8em 0 0;font-size:.94rem;line-height:1.7;color:#403b34}
+.timeline{max-width:1000px}.event{transition:.18s transform,.18s box-shadow}.event:hover{transform:translateY(-2px);box-shadow:9px 9px 0 var(--yellow)}.event strong{display:block;margin-bottom:3px}
+.works-inner>p{max-width:650px;color:#c5c0b8}.cards{grid-template-columns:repeat(12,1fr);gap:24px}.card{grid-column:span 4;min-height:430px}.card:first-child,.card:last-child{grid-column:span 8}.card:hover{box-shadow:0 14px 0 var(--red)}.card:first-child .art,.card:last-child .art{height:220px}.art:after{content:attr(data-index);position:absolute;right:14px;bottom:2px;font-size:3rem;line-height:1;font-weight:950;letter-spacing:-.08em;color:rgba(17,17,17,.8)}
+.legacy-grid{counter-reset:legacy}.legacy-box{position:relative;counter-increment:legacy}.legacy-box:after{content:"0" counter(legacy);position:absolute;right:18px;top:8px;font-size:3rem;font-weight:950;color:rgba(17,17,17,.11)}.legacy-box b{display:block;max-width:78%}
+.end:before{content:"";position:absolute;inset:-30%;opacity:.12;background:radial-gradient(circle,#fff 0 8px,transparent 9px) 0 0/54px 54px;transform:rotate(8deg)}.end h2,.end p{position:relative}.sources a{font-weight:750}.source-note{padding:18px 20px;background:rgba(246,213,0,.22);border-left:5px solid var(--yellow)}
+.to-top{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:40;width:48px;height:48px;display:grid;place-items:center;border:3px solid var(--ink);border-radius:50%;background:var(--yellow);text-decoration:none;font-weight:950;box-shadow:4px 4px 0 var(--ink);opacity:0;visibility:hidden;transform:translateY(10px);transition:.2s ease}.to-top.visible{opacity:1;visibility:visible;transform:none}
+@media(max-width:900px){.card,.card:first-child,.card:last-child{grid-column:span 6}.quote{position:static}.impact-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){body{font-size:16px}.hero{padding-inline:16px;place-items:end center}.hero-card{padding:28px 22px;box-shadow:9px 9px 0 var(--red)}h1{font-size:clamp(3rem,16vw,4.5rem)}.hero-actions{display:grid}.hero-actions .button{width:100%}nav{justify-content:flex-start}.impact-grid{grid-template-columns:1fr}.timeline:before{left:19px}.titem{display:block;padding:0 0 30px 48px}.year{text-align:left;padding-bottom:8px;color:var(--red);font-size:1rem}.event{padding:18px;box-shadow:5px 5px 0 var(--yellow)}.event:before{left:-39px;top:-28px;width:16px;height:16px}.cards{display:block}.card,.card:first-child,.card:last-child{min-height:0;margin-bottom:22px}.art,.card:first-child .art,.card:last-child .art{height:180px}.quote{padding:30px 25px;border-radius:0 56px 0 56px}.to-top{width:44px;height:44px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+@media print{nav,.progress,.to-top,.hero-actions{display:none}.hero{min-height:auto}.card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#life">跳至主要內容</a>
+<div class="progress" aria-hidden="true"><span></span></div>
+<header class="hero" id="top">
+  <div class="dots"></div>
+  <div class="hero-card">
+    <div class="eyebrow">IN MEMORIAM · 無限之後仍是無限</div>
+    <h1><span class="jp">草間彌生</span><br>YAYOI KUSAMA</h1>
+    <div class="years">1929.03.22 — 2026.08.14 · 享年97歲</div>
+    <p class="lead">她把恐懼畫成圓點，把幻視變成網，把鏡子變成宇宙。從松本到紐約，再回到東京，草間彌生用近一世紀的生命證明：重複不只是形式，而是一條通往「無限」的道路。</p>
+    <div class="hero-actions">
+      <a class="button" href="#life">進入她的無限 ↓</a>
+      <a class="button secondary" href="#works">先看代表作品</a>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <a href="#life">她的一生</a>
+  <a href="#impact">影響與意義</a>
+  <a href="#timeline">年譜</a>
+  <a href="#works">代表作品</a>
+  <a href="#legacy">留下什麼</a>
+  <a href="#sources">資料來源</a>
+</nav>
+
+<section id="life">
+  <div class="section-kicker">01 · LIFE</div>
+  <h2>把內在宇宙，<br>變成全世界的風景。</h2>
+  <div class="intro-grid">
+    <div>
+      <p>草間彌生1929年出生於日本長野縣松本市。童年時期便經歷反覆的幻視與幻覺，圓點、網目、花朵與無止境延展的圖像，後來成為她一生最核心的視覺語彙。</p>
+      <p>1957年赴美，1958年進入紐約藝術圈。她以巨幅「無限網」繪畫、軟雕塑、鏡面裝置、行為藝術與反戰事件迅速建立獨特位置。1965年的第一件「無限鏡屋」更把平面的重複變成觀眾可以走進去的空間。</p>
+      <p>1973年回到日本後，她同時持續繪畫、雕塑、裝置、小說與詩作。晚年仍長期創作，2009至2021年的《我永遠的靈魂》系列約完成900幅作品。2017年，草間彌生美術館在東京開館。</p>
+      <p>2026年8月14日，她在東京辭世，享年97歲；消息於8月27日由工作室／官方管道對外公布。她直到生命最後階段仍持續創作。</p>
+    </div>
+    <div class="quote">「無限」在草間彌生的藝術裡，不只是沒有盡頭的空間。它也是自我逐漸消失、個體融入世界的一種狀態。<small>— 本頁依其創作概念整理</small></div>
+  </div>
+</section>
+
+<section class="impact" id="impact">
+  <div class="impact-inner">
+    <div class="section-kicker">02 · IMPACT</div>
+    <h2>她如何改變日本的<br>藝術與設計視野？</h2>
+    <div class="impact-grid">
+      <article class="impact-card"><span>ART HISTORY</span><h3>把日本前衛放進世界藝術史</h3><p>她在 1950、60 年代直接進入紐約前衛現場，以無限網、軟雕塑、裝置與行為藝術建立位置，讓日本藝術家不只是西方潮流的追隨者，而是共同定義當代藝術的人。</p></article>
+      <article class="impact-card"><span>VISUAL LANGUAGE</span><h3>建立可延展的視覺系統</h3><p>圓點、網目、鏡面、南瓜與重複不是單一圖案，而是一套能跨越繪畫、空間、物件、服裝與平面傳播的識別語言，示範藝術概念如何成為完整的設計世界觀。</p></article>
+      <article class="impact-card"><span>PUBLIC EXPERIENCE</span><h3>重新想像作品與觀眾的關係</h3><p>她讓觀眾走進鏡屋，也讓雕塑進入街道、島嶼與城市地景。這種從觀看物件轉向體驗空間的思考，深刻影響日本的展覽設計、公共藝術與文化觀光。</p></article>
+      <article class="impact-card"><span>CULTURAL REACH</span><h3>跨越純藝術與大眾文化</h3><p>她證明高度個人的前衛語言，也能透過出版、時尚與品牌合作抵達大眾；同時，她的國際成就為日本女性與非西方藝術家拓開了更可見的位置。</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="timeline">
+  <div class="section-kicker">03 · TIMELINE</div>
+  <h2>97年的創作年譜</h2>
+  <div class="timeline">
+    <div class="titem"><div class="year">1929</div><div class="event"><strong>出生於松本</strong><br>3月22日出生於長野縣松本市。童年開始以繪畫回應幻視經驗。</div></div>
+    <div class="titem"><div class="year">1948</div><div class="event"><strong>赴京都學習日本畫</strong><br>進入京都市立美術工藝學校，學習日本畫，同時逐漸尋找脫離傳統的個人語言。</div></div>
+    <div class="titem"><div class="year">1957–58</div><div class="event"><strong>赴美，落腳紐約</strong><br>1957年赴美，翌年移居紐約，在戰後前衛藝術環境中發展「無限網」。</div></div>
+    <div class="titem"><div class="year">1959</div><div class="event"><strong>《No. F》與無限網</strong><br>以微小筆觸反覆鋪滿畫布，取消中心與邊界，建立最具辨識度的早期語彙。</div></div>
+    <div class="titem"><div class="year">1962</div><div class="event"><strong>《Accumulation No. 1》</strong><br>以手縫軟質突起覆蓋日常家具，將「重複與增殖」推進三維空間。</div></div>
+    <div class="titem"><div class="year">1965</div><div class="event"><strong>第一座無限鏡屋</strong><br>《Infinity Mirror Room—Phalli’s Field》利用鏡面把有限物件反射為看似沒有盡頭的場域。</div></div>
+    <div class="titem"><div class="year">1966</div><div class="event"><strong>《Narcissus Garden》</strong><br>在威尼斯雙年展場外以約1,500顆鏡面球形成裝置，兼具自我凝視與藝術市場批判。</div></div>
+    <div class="titem"><div class="year">1967–69</div><div class="event"><strong>Happenings 與反戰行動</strong><br>在紐約公共空間進行身體彩繪、表演與反戰事件，把藝術推向社會現場。</div></div>
+    <div class="titem"><div class="year">1973</div><div class="event"><strong>返回日本</strong><br>回國後持續視覺藝術創作，也大量投入小說與詩作。</div></div>
+    <div class="titem"><div class="year">1993</div><div class="event"><strong>威尼斯雙年展日本館個展</strong><br>代表日本於威尼斯雙年展日本館展出，國際聲望進一步提升。</div></div>
+    <div class="titem"><div class="year">1994</div><div class="event"><strong>直島《南瓜》</strong><br>黃色黑點大型南瓜設置於直島海邊，日後成為日本最具辨識度的公共藝術地標之一。</div></div>
+    <div class="titem"><div class="year">2006</div><div class="event"><strong>高松宮殿下紀念世界文化賞</strong><br>獲繪畫部門世界文化賞等重要國際榮譽。</div></div>
+    <div class="titem"><div class="year">2009–21</div><div class="event"><strong>《我永遠的靈魂》</strong><br>十二年間完成約900幅作品，把眼睛、臉孔、細胞般形體與色彩推向龐大晚期宇宙。</div></div>
+    <div class="titem"><div class="year">2016</div><div class="event"><strong>獲日本文化勳章</strong><br>獲日本文化勳章，成為日本當代藝術最具代表性的國際人物之一。</div></div>
+    <div class="titem"><div class="year">2017</div><div class="event"><strong>草間彌生美術館開館</strong><br>位於東京新宿的草間彌生美術館正式開館。</div></div>
+    <div class="titem"><div class="year">2021</div><div class="event"><strong>《每天都在祈求愛》</strong><br>展開新的繪畫系列，持續處理愛、生命、死亡與宇宙。</div></div>
+    <div class="titem"><div class="year">2026</div><div class="event"><strong>8月14日逝世，享年97歲</strong><br>工作室表示她直到生命最後階段仍保持創作。8月27日，逝世消息正式對外公布。</div></div>
+  </div>
+</section>
+
+<div class="works" id="works">
+  <div class="works-inner">
+    <div class="section-kicker" style="color:#f6d500">04 · MASTERWORKS</div>
+    <h2>六件作品，走進她的無限</h2>
+    <p>以下圖像為幾何示意，不重製作品照片。點選卡片中的館方連結，可查看作品原始資料與正式影像。</p>
+    <div class="cards">
+      <article class="card"><div class="art net"></div><div class="card-body"><div class="date">1959</div><h3>No. F</h3><p>「無限網」的代表作之一。密集小弧線沒有明確中心與終點，視線像被畫面吞沒。</p><a href="https://www.moma.org/collection/works/80176" target="_blank" rel="noopener">MoMA 作品資料 ↗</a></div></article>
+      <article class="card"><div class="art soft"></div><div class="card-body"><div class="date">1962</div><h3>Accumulation No. 1</h3><p>在扶手椅上覆滿手縫軟雕塑突起。日常家具變成既荒謬又令人不安的增殖體。</p><a href="https://www.moma.org/collection/works/163826" target="_blank" rel="noopener">MoMA 作品資料 ↗</a></div></article>
+      <article class="card"><div class="art mirror"></div><div class="card-body"><div class="date">1965</div><h3>Infinity Mirror Room—Phalli’s Field</h3><p>鏡面把有限的物件與觀眾自身反覆複製，形成第一座真正可以「走進無限」的草間式宇宙。</p><a href="https://hirshhorn.si.edu/kusama/infinity-rooms/" target="_blank" rel="noopener">Smithsonian 作品資料 ↗</a></div></article>
+      <article class="card"><div class="art spheres"></div><div class="card-body"><div class="date">1966</div><h3>Narcissus Garden</h3><p>約1,500顆鏡面球散布於威尼斯雙年展場域，映照觀眾，也反問藝術、名望與商品化。</p><a href="https://www.moma.org/calendar/exhibitions/4995" target="_blank" rel="noopener">MoMA PS1 作品資料 ↗</a></div></article>
+      <article class="card"><div class="art pumpkin"></div><div class="card-body"><div class="date">1994</div><h3>Pumpkin · 南瓜</h3><p>直島海邊的黃色黑點南瓜，把童年熟悉的植物形體轉化成既親切又超現實的公共雕塑。</p><a href="https://benesse-artsite.jp/en/story/20220930-2466.html" target="_blank" rel="noopener">Benesse Art Site Naoshima ↗</a></div></article>
+      <article class="card"><div class="art soul"></div><div class="card-body"><div class="date">2009–2021</div><h3>My Eternal Soul · 我永遠的靈魂</h3><p>約900幅大型繪畫構成她晚年的龐大視覺宇宙：眼睛、細胞、臉孔、花朵、死亡與愛彼此增殖。</p><a href="https://yayoi-kusama.jp/en/biography/" target="_blank" rel="noopener">官方生平資料 ↗</a></div></article>
+    </div>
+  </div>
+</div>
+
+<section id="legacy">
+  <div class="section-kicker">05 · LEGACY</div>
+  <h2>她留下的不只是圓點。</h2>
+  <div class="legacy-grid">
+    <div class="legacy-box"><b>把心理經驗變成形式</b><p>她沒有把幻視只當成私人苦痛，而是把「重複、增殖、自我消滅」轉化成一套完整藝術語言。</p></div>
+    <div class="legacy-box"><b>讓觀眾進入作品</b><p>在沉浸式展覽成為潮流之前，她已用鏡子、燈光與空間，讓觀看者的身體成為作品的一部分。</p></div>
+    <div class="legacy-box"><b>跨越藝術與大眾文化</b><p>從美術館、公共雕塑到時尚合作，她讓前衛藝術擁有極高的大眾辨識度，卻始終維持自己的視覺宇宙。</p></div>
+  </div>
+</section>
+
+<section class="end">
+  <h2>藝術讓生命延續，而無限仍在每一次觀看中展開。</h2>
+  <p>圓點不會停止。鏡子裡的反射也不會。草間彌生離開了，但她用一生建造的「無限」，仍會在每一位走進作品的人身上繼續延伸。</p>
+</section>
+
+<section id="sources">
+  <div class="section-kicker">06 · SOURCES</div>
+  <h2>資料來源</h2>
+  <ol class="sources">
+    <li><a href="https://yayoi-kusama.jp/en/news4518/" target="_blank" rel="noopener">草間彌生官方網站：逝世公告</a>（2026-08-27）。</li>
+    <li><a href="https://yayoi-kusama.jp/en/biography/" target="_blank" rel="noopener">草間彌生官方網站：Biography</a>。</li>
+    <li><a href="https://apnews.com/article/f92e15d5e6a446f48f3675ddd2418b8a" target="_blank" rel="noopener">Associated Press：Yayoi Kusama dies at 97 in Tokyo</a>（2026-08-27）。</li>
+    <li><a href="https://www.moma.org/artists/3315" target="_blank" rel="noopener">The Museum of Modern Art：Yayoi Kusama</a>，含 No. F、Accumulation No. 1 與 Narcissus Garden 相關資料。</li>
+    <li><a href="https://hirshhorn.si.edu/kusama/infinity-rooms/" target="_blank" rel="noopener">Hirshhorn Museum / Smithsonian：Infinity Mirror Rooms</a>。</li>
+    <li><a href="https://benesse-artsite.jp/en/story/20220930-2466.html" target="_blank" rel="noopener">Benesse Art Site Naoshima：Pumpkin 與直島設置歷史</a>。</li>
+  </ol>
+  <p class="sources source-note">註：本頁作品視覺為原創幾何示意，不重製作品照片；作品名稱、年代與生平內容依上述官方、館方及新聞來源整理。</p>
+</section>
+
+<footer>
+  A Tribute to Yayoi Kusama · 1929–2026 · 本頁為非官方紀念網頁
+</footer>
+<a class="to-top" href="#top" aria-label="回到頁首">↑</a>
+<script>
+(() => {
+  const progress = document.querySelector('.progress span');
+  const topButton = document.querySelector('.to-top');
+  const navLinks = [...document.querySelectorAll('nav a')];
+  const sections = navLinks.map(link => document.querySelector(link.hash)).filter(Boolean);
+  let ticking = false;
+  function updateUI() {
+    const max = document.documentElement.scrollHeight - innerHeight;
+    progress.style.width = `${max > 0 ? scrollY / max * 100 : 0}%`;
+    topButton.classList.toggle('visible', scrollY > innerHeight * .7);
+    let current = sections[0];
+    for (const section of sections) if (section.getBoundingClientRect().top <= 130) current = section;
+    navLinks.forEach(link => link.hash === `#${current?.id}` ? link.setAttribute('aria-current','true') : link.removeAttribute('aria-current'));
+    ticking = false;
+  }
+  addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(updateUI); ticking = true; } }, {passive:true});
+  addEventListener('resize', updateUI, {passive:true});
+  updateUI();
+})();
+</script>
+</body>
+</html>
